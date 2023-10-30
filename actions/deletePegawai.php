@@ -10,7 +10,7 @@ if (!is_numeric($id)) {
   return header("location: ../pages/pegawai.php?message=Data tidak ditemukan!&code=404");
 }
 
-$query = "DELETE FROM tb_pegawai WHERE id='$id'";
+$query = "DELETE FROM tb_pegawai WHERE nip = $id";
 $result = mysqli_query($db, $query);
 
 if ($result) {
